@@ -27,11 +27,11 @@ while True:
     try:
         #Finds the average of weights
         values.append(hx.get_weight(30))
-        print("Value "+hx.get_weight(30))
+        print("Value "+str(x.get_weight(30)))
 
         avg = sum(values) / float(len(values))
 
-        print("Avg "+avg)
+        print("Avg "+str(avg))
 
         file.write(str(avg))
         #print(avg)
