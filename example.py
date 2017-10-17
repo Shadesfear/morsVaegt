@@ -21,15 +21,17 @@ hx.tare()
 file = open("values.txt","w")
 avgBin = 10        
 
+values = []
 
 while True:
     try:
         #Finds the average of weights
-        values = []
-        for i in range(1,avgBin):
-            values.append(hx.get_weight(30))
-            print(hx.get_weight(30))
+        values.append(hx.get_weight(30))
+        print("Value "+hx.get_weight(30))
+
         avg = sum(values) / float(len(values))
+
+        print("Avg "+avg)
 
         file.write(str(avg))
         #print(avg)
@@ -38,7 +40,7 @@ while True:
 
         hx.power_down()
         hx.power_up()
-        time.sleep(2)
+        time.sleep(0.2)
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
         file.close()
