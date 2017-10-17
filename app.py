@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 def isInbed(weight, threshold):
-	if weight > threshold:
+	if int(weight) > int(threshold):
 		return True
 	else:
 		return False
