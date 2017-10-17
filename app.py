@@ -22,6 +22,7 @@ def index():
 		'title' : 'You are in bed',
 		#'time' : timeString
 		} 
+
 	elif not isInbed:
 		templateData = {
 		'title' : 'You are not in bed',
@@ -30,9 +31,6 @@ def index():
 
     return render_template('index.html', **templateData)
    
-    
-
-
 @app.route('/cakes')
 def cakes():
     return 'yummy ckaes!'
