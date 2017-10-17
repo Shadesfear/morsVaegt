@@ -31,6 +31,9 @@ hx.set_reference_unit(92)
 hx.reset()
 hx.tare()
 
+file = open("values.txt","rw")
+
+
 while True:
     try:
         # These three lines are usefull to debug wether to use MSB or LSB in the reading formats
@@ -41,11 +44,13 @@ while True:
         #print binary_string + " " + np_arr8_string
         
         # Prints the weight. Comment if you're debbuging the MSB and LSB issue.
-        val = hx.get_weight(5)
+
+        file.write(val = hx.get_weight(30))
         print val
 
         hx.power_down()
         hx.power_up()
-        time.sleep(0.5)
+        time.sleep(10000)
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
+        file.close()
