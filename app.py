@@ -19,17 +19,13 @@ def index():
 	isInbed = isInbed(weight, threshold)
 	if isInbed:
 		templateData = {
-		'title' : 'You are in bed',
-		#'time' : timeString
-		} 
+		'title' : 'You are in bed',	} 
 
 	elif not isInbed:
 		templateData = {
-		'title' : 'You are not in bed',
-		#'time' : timeString
-		}
-
+		'title' : 'You are not in bed',}
     return render_template('index.html', **templateData)
+
    
 @app.route('/cakes')
 def cakes():
