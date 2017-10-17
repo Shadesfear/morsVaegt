@@ -4,7 +4,13 @@ app = Flask(__name__)
 
 
 def isInbed(weight, threshold):
-	if float(weight) > float(threshold):
+	
+	try:
+		weight = int(weight)
+	except Exception as e:
+		weight = 0
+
+	if weight > threshold:
 		return True
 	else:
 		return False
@@ -13,6 +19,7 @@ file = open("values.txt","r")
 
 threshold = 10
 weight = file.read()
+print(weight)
 
 @app.route('/')
 def index():
