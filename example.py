@@ -28,14 +28,17 @@ while True:
         values = []
         for i in range(1,avgBin):
             values.append(hx.get_weight(30))
+            print(hx.get_weight(30))
         avg = sum(values) / float(len(values))
 
         file.write(str(avg))
         #print(avg)
-        print(hx.get_weight(30))
+        
+        #print(hx.get_weight(30))
+
         hx.power_down()
         hx.power_up()
-        time.sleep(10)
+        time.sleep(2)
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
         file.close()
