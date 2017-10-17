@@ -34,7 +34,7 @@ while True:
         print(avg)
         hx.power_down()
         hx.power_up()
-        time.sleep(10000)
+        time.sleep(10)
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
         file.close()
