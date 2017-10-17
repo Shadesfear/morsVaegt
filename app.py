@@ -16,12 +16,12 @@ weight = file.read()
 
 @app.route('/')
 def index():
-	isInbed = isInbed(weight, threshold)
-	if isInbed:
+	inBed = isInbed(weight, threshold)
+	if inBed:
 		templateData = {
 		'title' : 'You are in bed',	} 
 
-	elif not isInbed:
+	elif not inBed:
 		templateData = {
 		'title' : 'You are not in bed',}
 	return render_template('index.html', **templateData)
