@@ -31,7 +31,8 @@ while True:
         avg = sum(values) / float(len(values))
 
         file.write(str(avg))
-        print(avg)
+        #print(avg)
+        print(hx.get_weight(30))
         hx.power_down()
         hx.power_up()
         time.sleep(10)
