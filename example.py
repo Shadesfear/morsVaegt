@@ -32,6 +32,7 @@ hx.reset()
 hx.tare()
 
 file = open("values.txt","w")
+avgBin = 10        
 
 
 while True:
@@ -43,10 +44,14 @@ while True:
         #binary_string = hx.get_binary_string()
         #print binary_string + " " + np_arr8_string
         
-        # Prints the weight. Comment if you're debbuging the MSB and LSB issue.
 
-        file.write(str(hx.get_weight(30)))
-        #print val
+        #Finds the average of weights
+        values = []
+        for i in range(1,avgBin):
+            values.append(hx.get_weight(30))
+        avg = sum(values) / float(len(values))
+
+        file.write(str(avg))
 
         hx.power_down()
         hx.power_up()
