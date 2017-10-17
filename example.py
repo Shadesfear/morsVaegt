@@ -38,7 +38,7 @@ while True:
         
         #print(hx.get_weight(30))
 
-        if len(values > avgBin):
+        if len(values) > avgBin:
             print("New ")
             values = []
 
