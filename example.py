@@ -45,7 +45,7 @@ while True:
         
         # Prints the weight. Comment if you're debbuging the MSB and LSB issue.
 
-        file.write(hx.get_weight(30))
+        file.write(str(hx.get_weight(30)))
         #print val
 
         hx.power_down()
