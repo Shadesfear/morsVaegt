@@ -24,7 +24,7 @@ def index():
 	elif not isInbed:
 		templateData = {
 		'title' : 'You are not in bed',}
-    return render_template('index.html', **templateData)
+	return render_template('index.html', **templateData)
 
    
 @app.route('/cakes')
